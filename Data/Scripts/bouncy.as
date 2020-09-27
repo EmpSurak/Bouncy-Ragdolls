@@ -22,10 +22,6 @@ void Init(string level_name){
     }    
 }
 
-void ReceiveMessage(string msg){
-    timer.AddLevelEvent(msg);
-}
-
 void Update(){
     timer.Update();
 }
