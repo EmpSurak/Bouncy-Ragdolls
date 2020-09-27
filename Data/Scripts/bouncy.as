@@ -11,7 +11,7 @@ void Init(string level_name){
             RiggedObject@ rig = _char.rigged_object();
             _char.Execute("recovery_time = 1.0f;");
 
-            if(length(rig.GetAvgVelocity()) < 5.0f) {
+            if(length(rig.GetAvgVelocity()) < 5.0f){
                 const float _push_force_mult = 2000.0f;
                 vec3 direction = vec3(rand()%4-2, rand()%4-1, rand()%4-2) * _push_force_mult;
                 rig.ApplyForceToRagdoll(direction, rig.skeleton().GetCenterOfMass());
@@ -24,7 +24,7 @@ void ReceiveMessage(string msg){
     timer.AddLevelEvent(msg);
 }
 
-void Update() {
+void Update(){
     timer.Update();
 }
 
@@ -32,4 +32,4 @@ bool HasFocus(){
     return false;
 }
 
-void DrawGUI() {}
+void DrawGUI(){}

@@ -2,7 +2,7 @@
 
 funcdef void ON_RAGDOLL_CALLBACK(MovementObject@);
 
-class OnRagdollJob : BasicJobInterface  {
+class OnRagdollJob : BasicJobInterface {
     protected int id;
     protected ON_RAGDOLL_CALLBACK @callback;
     protected float started = 0.0f;
