@@ -11,8 +11,9 @@ void Init(string level_name){
         MovementObject@ char = ReadCharacter(i);
         timer.Add(OnRagdollJob(char.GetID(), function(_char){
             _char.Execute("recovery_time = 10.0f;");
-            RiggedObject@ rig = _char.rigged_object();
+            UpdateListener(camera.GetPos(), vec3(0, 0, 0), camera.GetFacing(), camera.GetUpVector());
 
+            RiggedObject@ rig = _char.rigged_object();
             if(length(rig.GetAvgVelocity()) < 5.0f){
                 vec3 direction = vec3(rand()%5-2, rand()%4-1, rand()%5-2) * push_force_mult;
                 rig.ApplyForceToRagdoll(direction, rig.skeleton().GetCenterOfMass());
