@@ -13,7 +13,7 @@ void Init(string level_name){
 
             if(length(rig.GetAvgVelocity()) < 5.0f){
                 const float _push_force_mult = 2000.0f;
-                vec3 direction = vec3(rand()%4-2, rand()%4-1, rand()%4-2) * _push_force_mult;
+                vec3 direction = vec3(rand()%5-2, rand()%4-1, rand()%5-2) * _push_force_mult;
                 rig.ApplyForceToRagdoll(direction, rig.skeleton().GetCenterOfMass());
             }
         }));
