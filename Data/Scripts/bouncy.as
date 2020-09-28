@@ -34,6 +34,6 @@ bool HasFocus(){
 void DrawGUI(){}
 
 void Menu(){
-    ImGui_SliderFloat("Ragdoll Force", push_force_mult, 0, 10000);
-    ImGui_SliderFloat("Ragdoll Velocity", min_velocity, 0, 50);
+    ImGui_SliderFloat("Ragdoll Force", push_force_mult, 0, 5000);
+    ImGui_SliderFloat("Ragdoll Velocity", min_velocity, 0, 20);
 }
